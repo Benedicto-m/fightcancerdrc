@@ -1,18 +1,18 @@
 backend:
   name: github
-  repo: Benedicto-m/fightcancerdrc. # Remplace par ton dépôt
-  branch: main # Branche principale
+  repo: Benedicto-m/fightcancerdrc
+  branch: main
 
-media_folder: "images/uploads" # Où les images seront stockées
+media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
   - name: "blog"
-    label: "Articles du Blog"
-    folder: "blog"
+    label: "Articles de blog"
+    folder: "_posts"
     create: true
     slug: "{{slug}}"
     fields:
-      - { name: "title", label: "Titre", widget: "string" }
-      - { name: "date", label: "Date", widget: "datetime" }
-      - { name: "body", label: "Contenu", widget: "markdown" }
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Contenu", name: "body", widget: "markdown" }
