@@ -1,5 +1,5 @@
 ---
-title: "Mon Premier Article"
-date: 2024-11-25
+title: EBOLA A KIKWIT
+date: 2024-11-25T00:00:00+01:00
 ---
-Bienvenue sur le blog de Fight Cancer !
+Bonjour moneiur malgré les déplacemnts faits
