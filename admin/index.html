@@ -3,15 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <title>Content Manager</title>
-    <!-- CMS script -->
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   </head>
   <body>
-    <script>
-      window.CMS_MANUAL_INIT = true;
-      window.addEventListener('DOMContentLoaded', () => {
-        CMS.init();
-      });
-    </script>
+    <!-- Aucun contenu nécessaire dans le body -->
+    <!-- Place le script CMS EN BAS du body pour garantir le bon chargement -->
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   </body>
 </html>
