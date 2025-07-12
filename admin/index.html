@@ -2,20 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Fight Cancer CMS</title>
+    <title>CMS</title>
+    <script src="https://unpkg.com/decap-cms@3.32.1/dist/decap-cms.js"></script>
   </head>
   <body>
-    <script src="https://unpkg.com/decap-cms@3.32.1/dist/decap-cms.js"></script>
     <script>
-      window.addEventListener('load', function () {
-        if (typeof CMS !== "undefined") {
-          CMS.init({
-            config: "/admin/config.yml"
-          });
-        } else {
-          console.error("CMS is not defined");
-        }
+      window.addEventListener('DOMContentLoaded', () => {
+        CMS.init();
       });
     </script>
   </body>
 </html>
+
