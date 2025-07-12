@@ -9,12 +9,12 @@ media_folder: "uploads"
 public_folder: "/uploads"
 
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: "accueil"
+    label: "Accueil"
     files:
-      - label: "Accueil"
-        name: "home"
-        file: "index.md"
+      - file: "index.md"
+        label: "Page d'accueil"
+        name: "page_accueil"
         fields:
           - label: "Titre"
             name: "title"
