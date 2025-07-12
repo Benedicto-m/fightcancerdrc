@@ -9,12 +9,12 @@ media_folder: "uploads"
 public_folder: "/uploads"
 
 collections:
-  - name: "accueil"
-    label: "Accueil"
+  - name: "accueil_unique"
+    label: "Page d'accueil"
     files:
       - file: "index.md"
-        label: "Page d'accueil"
-        name: "page_accueil"
+        label: "Éditer page d'accueil"
+        name: "accueil_file"
         fields:
           - label: "Titre"
             name: "title"
@@ -22,3 +22,4 @@ collections:
           - label: "Contenu"
             name: "body"
             widget: "markdown"
+
