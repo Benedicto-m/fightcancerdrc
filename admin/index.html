@@ -5,45 +5,15 @@
     <title>Fight Cancer CMS</title>
   </head>
   <body>
-    <!-- Charger Decap CMS (version stable) -->
     <script src="https://unpkg.com/decap-cms@3.32.1/dist/decap-cms.js"></script>
-
-    <!-- Attendre que CMS soit disponible avant d'initialiser -->
     <script>
       window.addEventListener('load', function () {
         if (typeof CMS !== "undefined") {
           CMS.init({
-            config: {
-              backend: {
-                name: "github",
-                repo: "Benedicto-m/fightcancerdrc",
-                branch: "main",
-                auth_scope: "repo",
-                client_id: "Ov23lix2qO57DNu9MJ52"
-              },
-              media_folder: "uploads",
-              public_folder: "/uploads",
-              collections: [
-                {
-                  name: "accueil_unique",
-                  label: "Page d'accueil",
-                  files: [
-                    {
-                      file: "index.md",
-                      label: "Éditer page d'accueil",
-                      name: "accueil_file",
-                      fields: [
-                        { label: "Titre", name: "title", widget: "string" },
-                        { label: "Contenu", name: "body", widget: "markdown" }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
+            config: "/admin/config.yml"
           });
         } else {
-          console.error("Decap CMS script non chargé !");
+          console.error("CMS is not defined");
         }
       });
     </script>
