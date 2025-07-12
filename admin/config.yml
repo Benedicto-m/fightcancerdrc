@@ -1,20 +1,20 @@
-backend:
+
+ backend:
   name: github
   repo: Benedicto-m/fightcancerdrc
   branch: main
-  auth_scope: repo
   client_id: Ov23lix2qO57DNu9MJ52
 
 media_folder: "uploads"
 public_folder: "/uploads"
 
 collections:
-  - name: "accueil_unique"
+  - name: "homepage"
     label: "Page d'accueil"
     files:
       - file: "index.md"
-        label: "Éditer page d'accueil"
-        name: "accueil_file"
+        label: "Contenu principal"
+        name: "accueil"
         fields:
           - label: "Titre"
             name: "title"
@@ -22,4 +22,3 @@ collections:
           - label: "Contenu"
             name: "body"
             widget: "markdown"
-
