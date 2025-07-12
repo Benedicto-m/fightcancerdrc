@@ -2,6 +2,8 @@ backend:
   name: github
   repo: Benedicto-m/fightcancerdrc
   branch: main
+  auth_scope: repo
+  client_id: VOTRE_CLIENT_ID_GITHUB
 
 media_folder: "uploads"
 public_folder: "/uploads"
