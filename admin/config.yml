@@ -3,7 +3,7 @@ backend:
   repo: Benedicto-m/fightcancerdrc
   branch: main
   auth_scope: repo
-  client_id: VOTRE_CLIENT_ID_GITHUB
+  client_id: Ov23lix2qO57DNu9MJ52
 
 media_folder: "uploads"
 public_folder: "/uploads"
