@@ -40,6 +40,7 @@
 						<a href="https://www.facebook.com/profile.php?id=61566268457744" class="grow"><i class="fab fa-facebook"></i></a>
 						<a href="https://www.linkedin.com/in/fightcancer-rdc" class="grow"><i class="fab fa-linkedin"></i></a>
 						<a href="https://x.com/FightCancerRdc?t=gJ05tu4ir84AZA-uY_j_qw&s=09" class="grow"><i class="fab fa-x-twitter"></i></a>
+						<a href="https://wa.me/+243976457764/?text=Salut!%20J'ai%20une%20question%20à%20vous%20proposer." class="grow"><i class="fab fa-whatsapp"></i></a>
 					</div>
 				</div>
 			</div>
@@ -66,14 +67,12 @@
 					</nav>
 				</div>
 			</div>
-		</header>
+		</header>	
 		
-		
-
 		
 		<div id="fh5co-contact" class="animate-box">
 			<div class="container">
-				<form action="#">
+				<form action="https://formspree.io/f/mnnjzwan" method="POST">
 					<div class="row">
 						<div class="col-md-6">
 							<h3 class="section-title">Our adress</h3>
@@ -81,7 +80,7 @@
 							<ul class="contact-info">
 								<li><i class="fas fa-location"></i>25 Av Basiki, Q. Kasika, commune de KARISIMBI, ville de GOMA, Nord kivu, DRC</li>
 								<li><i class="fas fa-phone"></i>+ 243 977 109 257, +243 976 457 764</li>
-								<li><i class="fas fa-envelope"></i><a href="#">info@gmail.com</a></li>
+								<li><i class="fas fa-envelope"></i><a href="#">info@fightcancerdrc.org</a></li>
 							</ul>
 						</div>
 						<div class="col-md-6">
@@ -110,11 +109,51 @@
 						</div>
 					</div>
 				</form>
+				 <p id="form-message"></p>
+
+    <script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const form = event.target;
+        const formData = new FormData(form);
+        const messageBox = document.getElementById("form-message");
+
+        fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+        }).then(response => {
+            if (response.ok) {
+                messageBox.innerHTML = "<p>Merci ! Votre message a été envoyé.</p>";
+                form.reset();
+            } else {
+                messageBox.innerHTML = "<p>Oops ! Une erreur est survenue.</p>";
+            }
+        }).catch(error => {
+            messageBox.innerHTML = "<p>Oops ! Une erreur est survenue.</p>";
+        });
+    });
+    </script>
 			</div>
 		</div>
-		<!-- END fh5co-contact -->
-		<div id="map" class="fh5co-map"></div>
-		<!-- END map -->
+		
+		 <!-- 📍 Section Carte Google Maps -->
+	<section class="map-section">
+    <h2 class="section-title">Localisation</h2>
+    
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937596!2d2.2922926155096146!3d48.8583700792875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1623762907800!5m2!1sfr!2sfr" 
+            allowfullscreen 
+            loading="lazy"
+            title="Localisation FIGHT CANCER">
+        </iframe>
+    </div>
+
+    <a href="https://www.google.com/maps/place/Tour+Eiffel" target="_blank" class="map-button">
+        Voir sur Google Maps
+    </a>
+	</section>
 
 		
 		<!-- fh5co-blog-section -->
